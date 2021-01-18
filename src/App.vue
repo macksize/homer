@@ -65,8 +65,8 @@
                 {{ group.name }}
               </h2>
               <Service
-                v-for="item in group.items"
-                :key="item.name"
+                v-for="(item, index) in group.items"
+                :key="index"
                 v-bind:item="item"
                 :class="['column', `is-${12 / config.columns}`]"
               />
@@ -88,9 +88,9 @@
                 {{ group.name }}
               </h2>
               <Service
-                v-for="item in group.items"
+                v-for="(item, index) in group.items"
+                :key="index"
                 v-bind:item="item"
-                :key="item.url"
               />
             </div>
           </div>
@@ -199,6 +199,7 @@ export default {
     matchesFilter: function (item) {
       return (
         item.name.toLowerCase().includes(this.filter) ||
+        (item.subtitle && item.subtitle.toLowerCase().includes(this.filter)) ||
         (item.tag && item.tag.toLowerCase().includes(this.filter))
       );
     },
