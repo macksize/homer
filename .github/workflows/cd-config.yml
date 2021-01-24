@@ -1,0 +1,21 @@
+name: CD Config
+
+on:
+  push:
+    paths:
+      - "public/assets/config.yml"
+      
+jobs:
+  SSH:
+    if: github.event.base_ref == 'refs/heads/main'
+    name: Git Pull
+    runs-on: ubuntu-latest
+    steps:
+    - name: Git Pull
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: cd ${{ secrets.PATH }} && git checkout main && git pull
