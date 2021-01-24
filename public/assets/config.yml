@@ -85,7 +85,7 @@ services:
         subtitle: "Network of communities"
         tag: "bookmarks"
         tagstyle: "is-link"
-        url: "https://old.reddit.com/"
+        url: "https://reddit.com/"
         target: "_blank"
       - name: "Netflix"
         logo: "assets/tools/netflix.png"
