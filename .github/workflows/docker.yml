@@ -17,5 +17,5 @@ jobs:
         registry: docker.pkg.github.com
         repository: maxpoullain/homer/homer
         tags: latest
-        tag_with_ref: refs/tags/{git-tag}
+        tag_with_ref: true
         tag_with_sha: true
