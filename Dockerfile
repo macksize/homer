@@ -12,10 +12,10 @@ RUN yarn build
 # production stage
 FROM alpine:3.11
 
-ENV USER darkhttpd
-ENV GROUP darkhttpd
-ENV GID 911
-ENV UID 911
+ENV USER max
+ENV GROUP max
+ENV GID 1000
+ENV UID 1000
 ENV PORT 8080
 
 RUN addgroup -S ${GROUP} -g ${GID} && adduser -D -S -u ${UID} ${USER} ${GROUP} && \
