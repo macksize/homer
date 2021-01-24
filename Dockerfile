@@ -29,3 +29,4 @@ EXPOSE ${PORT}
 VOLUME /www/assets
 ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]
 
+
