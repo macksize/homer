@@ -1,8 +1,7 @@
 name: docker
 on:
   push:
-    paths:
-      - "Dockerfile"
+    tags: [v**.docker]
 jobs:
   Build-and-Push-Docker-Image:
     runs-on: ubuntu-latest
@@ -17,4 +16,6 @@ jobs:
         password: ${{secrets.GITHUB_TOKEN}}
         registry: docker.pkg.github.com
         repository: maxpoullain/homer/homer
+        tags: latest
+        tag_with_ref: refs/tags/{git-tag}
         tag_with_sha: true

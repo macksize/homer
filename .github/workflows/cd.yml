@@ -1,19 +1,20 @@
-name: remote ssh command
+name: SSH Deploy
 on:
   push:
+    branches:
+      - "main"
     paths:
       - "public/assets/config.yml"
 jobs:
-
   build:
-    name: Build
+    name: SSH Deploy
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using password
+    - name: SSH Deploy
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
-        script: cd ${{ secrets.PATH }} && git pull
+        script: cd ${{ secrets.PATH }} && git checkout main && git pull
