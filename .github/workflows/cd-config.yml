@@ -7,7 +7,6 @@ on:
       
 jobs:
   SSH:
-    if: github.event.base_ref == 'refs/heads/main'
     name: Git Pull
     runs-on: ubuntu-latest
     steps:
