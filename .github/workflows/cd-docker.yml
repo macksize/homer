@@ -1,19 +1,19 @@
-name: SSH Deploy
+name: CD Docker
+
 on:
   push:
-    paths:
-      - "public/assets/config.yml"
+    tags: [v*]
+
 jobs:
-  build:
-    if: github.event.base_ref == 'refs/heads/main'
-    name: SSH Deploy
+  SSH:
+    name: Update Docker Image
     runs-on: ubuntu-latest
     steps:
-    - name: SSH Deploy
+    - name: Update Docker Image
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
-        script: cd ${{ secrets.PATH }} && git checkout main && git pull
+        script: cd ${{ secrets.DOCKER_PATH }} && docker pull docker.pkg.github.com/maxpoullain/homer/homer:latest && ${{ secrets.RECREATE_DOCKER }}

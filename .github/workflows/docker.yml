@@ -1,9 +1,11 @@
-name: docker
+name: Docker
+
 on:
   push:
     tags: [v*]
+
 jobs:
-  Build-and-Push-Docker-Image:
+  Build-Push-Docker-Image:
     runs-on: ubuntu-latest
     name: Docker Build, Tag, Push
     steps:
@@ -18,4 +20,3 @@ jobs:
         repository: maxpoullain/homer/homer
         tags: latest
         tag_with_ref: true
-        tag_with_sha: true
