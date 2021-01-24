@@ -1,7 +1,7 @@
 name: docker
 on:
   push:
-    tags: [v**.docker]
+    tags: [v*]
 jobs:
   Build-and-Push-Docker-Image:
     runs-on: ubuntu-latest

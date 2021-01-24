@@ -1,12 +1,11 @@
 name: SSH Deploy
 on:
   push:
-    branches:
-      - "main"
     paths:
       - "public/assets/config.yml"
 jobs:
   build:
+    if: github.event.base_ref == 'refs/heads/main'
     name: SSH Deploy
     runs-on: ubuntu-latest
     steps:
