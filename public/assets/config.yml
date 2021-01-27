@@ -6,7 +6,7 @@ title: "Dashboard"
 subtitle: "corsair.bzh"
 logo: "assets/logo.png"
 
-columns: 3
+columns: 4
 connectivityCheck: true
 
 header: true
@@ -87,6 +87,24 @@ services:
         tagstyle: "is-link"
         url: "https://www.amazon.ca/"
         target: "_blank"
+
+      - name: "BNC"
+        logo: "assets/tools/brs.png"
+        subtitle: "Banking service"
+        tag: "bookmarks"
+        tagstyle: "is-link"
+        url: "https://app.bnc.ca/?lang=fr&"
+        target: "_blank"
+
+      - name: "BRS"
+        logo: "assets/tools/bnc.png"
+        subtitle: "Banking service"
+        tag: "bookmarks"
+        tagstyle: "is-link"
+        url: "https://clients.boursorama.com/"
+        target: "_blank"
+
+
       - name: "KeeWeb"
         logo: "assets/tools/keeweb.png"
         subtitle: "Cross-platform password manager"
