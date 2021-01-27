@@ -6,7 +6,7 @@ title: "Dashboard"
 subtitle: "corsair.bzh"
 logo: "assets/logo.png"
 
-columns: 4
+columns: 2
 connectivityCheck: true
 
 header: true
@@ -89,7 +89,7 @@ services:
         target: "_blank"
 
       - name: "BNC"
-        logo: "assets/tools/brs.png"
+        logo: "assets/tools/bnc.png"
         subtitle: "Banking service"
         tag: "bookmarks"
         tagstyle: "is-link"
@@ -97,7 +97,7 @@ services:
         target: "_blank"
 
       - name: "BRS"
-        logo: "assets/tools/bnc.png"
+        logo: "assets/tools/brs.png"
         subtitle: "Banking service"
         tag: "bookmarks"
         tagstyle: "is-link"
