@@ -6,7 +6,7 @@ title: "Dashboard"
 subtitle: "corsair.bzh"
 logo: "assets/logo.png"
 
-columns: 2
+columns: 3
 connectivityCheck: true
 
 header: true
