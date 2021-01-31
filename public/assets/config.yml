@@ -87,7 +87,6 @@ services:
         tagstyle: "is-link"
         url: "https://www.amazon.ca/"
         target: "_blank"
-
       - name: "BNC"
         logo: "assets/tools/bnc.png"
         subtitle: "Banking service"
@@ -95,7 +94,6 @@ services:
         tagstyle: "is-link"
         url: "https://app.bnc.ca/?lang=fr&"
         target: "_blank"
-
       - name: "BRS"
         logo: "assets/tools/brs.png"
         subtitle: "Banking service"
@@ -103,8 +101,13 @@ services:
         tagstyle: "is-link"
         url: "https://clients.boursorama.com/"
         target: "_blank"
-
-
+      - name: "Degiro"
+        logo: "assets/tools/degiro.png"
+        subtitle: "Stock broker"
+        tag: "bookmarks"
+        tagstyle: "is-link"
+        url: "https://degiro.fr/"
+        target: "_blank"
       - name: "KeeWeb"
         logo: "assets/tools/keeweb.png"
         subtitle: "Cross-platform password manager"
