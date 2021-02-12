@@ -191,7 +191,7 @@ services:
         tagstyle: "is-warning"
         url: "https://www.tradingview.com/"
         target: "_blank"
-        - name: "TransferWise"
+      - name: "TransferWise"
         logo: "assets/tools/transferwise.png"
         subtitle: "Send money abroad"
         tag: "finance"
